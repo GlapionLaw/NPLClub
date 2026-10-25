@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Crosscourt Padel Collective</title>
+  <meta name="description" content="Get in touch with Crosscourt.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="" width="32" height="32"><span>Crosscourt</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="join.html">Membership</a></li>
+        <li><a href="coaches.html">Coaches</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a class="btn" href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow" style="color:var(--ink-soft)">Contact</p>
+        <h1>Let's play.</h1>
+        <p class="lead section-intro">Players, coaches, clubs and partners: one form, and we'll route it.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <!-- FORM_ENDPOINT: replace action="#" with your form provider URL (Tally, Formspree, Google Forms). -->
+        <form action="#" method="post">
+          <label>Name <input name="name" required autocomplete="name"></label>
+          <label>Email <input name="email" type="email" required autocomplete="email"></label>
+          <label>I'm interested in
+            <select name="type" id="type">
+              <option value="community">Free Community membership</option>
+              <option value="team">Team membership</option>
+              <option value="competitor">Competitor membership</option>
+              <option value="tryout">A tryout</option>
+              <option value="coach">Coaching with Crosscourt</option>
+              <option value="club">My club becoming a Home Club</option>
+              <option value="partner">Partnering / sponsoring</option>
+            </select>
+          </label>
+          <label>Home club and city <input name="club"></label>
+          <label>Message <textarea name="message"></textarea></label>
+          <button class="btn" type="submit">Send</button>
+        </form>
+        <script>
+          // Preselect the interest from ?type=
+          const t = new URLSearchParams(location.search).get("type");
+          const s = document.getElementById("type");
+          if (t && s.querySelector(`option[value="${t}"]`)) s.value = t;
+        </script>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p><strong>Crosscourt Padel Collective</strong><br>The club-neutral padel team for New York, New Jersey, Connecticut and Boston.</p>
+        <p>&copy; 2026 Crosscourt Padel Collective</p>
+      </div>
+      <ul>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="join.html">Membership</a></li>
+        <li><a href="events.html">Events</a></li>
+      </ul>
+      <ul>
+        <li><a href="coaches.html">Coaches</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
