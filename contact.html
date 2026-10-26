@@ -35,8 +35,8 @@
     <section class="page-hero">
       <div class="wrap">
         <p class="eyebrow" style="color:var(--ink-soft)">Contact</p>
-        <h1>Let's play.</h1>
-        <p class="lead section-intro">Players, coaches, clubs and partners: one form, and we'll route it.</p>
+        <h1>Say hello.</h1>
+        <p class="lead section-intro">Players, coaches, clubs, partners: one form, and we'll get it to the right person.</p>
       </div>
     </section>
 
@@ -44,19 +44,19 @@
       <div class="wrap">
         <!-- FORM_ENDPOINT: replace action="#" with your form provider URL (Tally, Formspree, Google Forms). -->
         <form action="#" method="post">
-          <label>Name <input name="name" required autocomplete="name"></label>
-          <label>Email <input name="email" type="email" required autocomplete="email"></label>
+          <label>Name <input name="name" id="name" required autocomplete="name"></label>
+          <label>Email <input name="email" id="email" type="email" required autocomplete="email"></label>
           <label>I'm interested in
             <select name="type" id="type">
-              <option value="community">Free Community membership</option>
-              <option value="tryout">A tryout for an NPL roster</option>
+              <option value="community">Joining the community</option>
+              <option value="tryout">Trying out</option>
               <option value="coach">Coaching with Crosscourt</option>
-              <option value="club">My club becoming a Home Club</option>
-              <option value="partner">Partnering / sponsoring</option>
+              <option value="club">Becoming a partner club</option>
+              <option value="partner">Sponsorship</option>
             </select>
           </label>
-          <label>Home club and city <input name="club"></label>
-          <label>Message <textarea name="message"></textarea></label>
+          <label>Your club and city <input name="club" id="club"></label>
+          <label>Message <textarea name="message" id="message"></textarea></label>
           <button class="btn" type="submit">Send</button>
         </form>
         <script>
@@ -71,7 +71,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <p><strong>Crosscourt Padel Collective</strong><br>The club-neutral padel organization for New York, New Jersey, Connecticut and Boston.</p>
+        <p><strong>Crosscourt Padel Collective</strong><br>The padel team for New York and Boston.</p>
         <p>&copy; 2026 Crosscourt Padel Collective</p>
       </div>
       <ul>
